@@ -1,0 +1,12 @@
+name: Trigger Twilio Function
+
+on:
+  schedule:
+    - cron: '0 */4 * * *' # Every 4 hours
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Twilio Function
+        run: curl -X POST https://waynetesting-2070.twil.io/path_1
